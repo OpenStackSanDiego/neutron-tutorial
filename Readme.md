@@ -63,9 +63,9 @@ Uh oh, your web developers broke the server and need a replacement! They want yo
 <LI>Login via the console and start up the web server
 <LI>Under the server gear icon, disconnect the "floating IP" from the old server
 <LI>Assign the existing "floating IP" to the new server
-<LI>Use a web browser to connect to the web server at http://<floating IP>/
+<LI>Use a web browser to connect to the web server at http://floating_IP/
 <LI>Destroy the old server
-<LI>Double check that the page is alive http://<floating IP>/
+<LI>Double check that the page is alive http://floating_IP/
 </UL>
 
 Congrats! You swapped servers using the floating IPs without anyone knowing!
@@ -75,7 +75,7 @@ Business it picking up! You need a second web server to handle the load and load
 <LI>Clone the existing Ubunutu server (don't assign it a floating IP)
 <LI>Create a Load Balancer and assign it the floating IP
 <LI>Drag both servers into the load balancing pool
-<LI>Use a web browser to connect to the web server at http://<floating IP>/
+<LI>Use a web browser to connect to the web server at http://floating_IP/
 </UL>
 
 Try out pausing each of the servers individually (and both) to validate that the load balancer is working correctly.
