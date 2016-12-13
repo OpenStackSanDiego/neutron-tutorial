@@ -36,7 +36,13 @@ Your web developers want an "Ubuntu 16.04" flavored Linux web server (LAMP). LAM
 <LI>Click "Create Server" to proceed
 </UL>
 
-Your first web server is now starting up!  Take a look at what internal private IP address it has been assigned. It should be on the 10.10.10.0 subnet.
+Your first web server is now starting up!  Take a look at what internal private IP address it has been assigned. It should be on the 10.10.10.0 subnet. Next we start up the web server.
+
+<LI>
+<UL>Click the gear icon by the new server and select "Console"
+<UL>Login using the username and password that you created above
+<UL>Start the web server with the command "sudo /etc/init.d/apache2 start"
+<LI>
 
 Next we're going to create a floating IP address on the public Internet that can be used to access servers on our internal network.
 
@@ -45,4 +51,33 @@ Floating IP addresses can be moved from server to server. We're going to create 
 <UL>
 <LI>Click the gear icon by the new server and select "Connect floating IP"
 <LI>"Create new IP" and "Add floating IP"
+<LI>Use a web browser to connect to the web server at http://<floating IP>/
 </UL>
+
+The web page should now start up!!
+
+Uh oh, your web developers broke the server and need a replacement! They want you to startup a replacement server and assign it the floating IP.
+
+<UL>
+<LI>Create a new Ubunutu Linux server in the Los Angeles zone in the webserver-network subnet
+<LI>Login via the console and start up the web server
+<LI>Under the server gear icon, disconnect the "floating IP" from the old server
+<LI>Assign the existing "floating IP" to the new server
+<LI>Use a web browser to connect to the web server at http://<floating IP>/
+<LI>Destroy the old server
+<LI>Double check that the page is alive http://<floating IP>/
+</UL>
+
+Congrats! You swapped servers using the floating IPs without anyone knowing!
+
+Business it picking up! You need a second web server to handle the load and load balancing between the two. We're going to take our floating IP and assign it to the load balancer which will send traffic across the two virtual machines.
+<LI>
+<UL>Clone the existing Ubunutu server (don't assign it a floating IP)
+<UL>Create a Load Balancer and assign it the floating IP
+<UL>Drag both servers into the load balancing pool
+<LI>Use a web browser to connect to the web server at http://<floating IP>/
+</UL>
+
+Try out pausing each of the servers individually (and both) to validate that the load balancer is working correctly.
+
+Congrats! You are well on your way to building your own OpenStack powered business!
