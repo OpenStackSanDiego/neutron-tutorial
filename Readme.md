@@ -38,11 +38,11 @@ Your web developers want an "Ubuntu 16.04" flavored Linux web server (LAMP). LAM
 
 Your first web server is now starting up!  Take a look at what internal private IP address it has been assigned. It should be on the 10.10.10.0 subnet. Next we start up the web server.
 
-<LI>
-<UL>Click the gear icon by the new server and select "Console"
-<UL>Login using the username and password that you created above
-<UL>Start the web server with the command "sudo /etc/init.d/apache2 start"
-<LI>
+<UL>
+<LI>Click the gear icon by the new server and select "Console"
+<LI>Login using the username and password that you created above
+<LI>Start the web server with the command "sudo /etc/init.d/apache2 start"
+</UL>
 
 Next we're going to create a floating IP address on the public Internet that can be used to access servers on our internal network.
 
@@ -71,10 +71,10 @@ Uh oh, your web developers broke the server and need a replacement! They want yo
 Congrats! You swapped servers using the floating IPs without anyone knowing!
 
 Business it picking up! You need a second web server to handle the load and load balancing between the two. We're going to take our floating IP and assign it to the load balancer which will send traffic across the two virtual machines.
-<LI>
-<UL>Clone the existing Ubunutu server (don't assign it a floating IP)
-<UL>Create a Load Balancer and assign it the floating IP
-<UL>Drag both servers into the load balancing pool
+<UL>
+<LI>Clone the existing Ubunutu server (don't assign it a floating IP)
+<LI>Create a Load Balancer and assign it the floating IP
+<LI>Drag both servers into the load balancing pool
 <LI>Use a web browser to connect to the web server at http://<floating IP>/
 </UL>
 
