@@ -51,7 +51,7 @@ Floating IP addresses can be moved from server to server. We're going to create 
 <UL>
 <LI>Click the gear icon by the new server and select "Connect floating IP"
 <LI>"Create new IP" and "Add floating IP"
-<LI>Use a web browser to connect to the web server at http://<floating IP>/
+<LI>Use a web browser to connect to the web server at http://floating_IP/
 </UL>
 
 The web page should now start up!!
