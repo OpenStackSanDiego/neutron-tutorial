@@ -3,7 +3,10 @@ OpenStack San Diego Meetup
 
 In this tutorial, you'll be starting up a number of web servers to run your new ecommerce startup. These virtual servers will be running in an OpenStack cloud that has all the computing, storage and networking resources you need.
 
-Before you start, you'll neeed an account login and password from the person in charge of this lab. If you're doing this virtually, you can send a tweet to "@OpenStackSD" and we'll direct message you some credentials.
+Before you start, you'll neeed an account login and password from the person in charge of this lab. 
+
+For those of you in the lab, add yourself to this list to take an account:
+https://etherpad.openstack.org/p/san-diego
 
 <UL>
 <LI>Get a username and password for the OpenStack cloud
