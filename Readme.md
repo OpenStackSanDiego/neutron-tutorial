@@ -3,7 +3,7 @@ OpenStack San Diego Meetup
 
 In this tutorial, you'll be starting up a number of web servers to run your new ecommerce startup. These virtual servers will be running in an OpenStack cloud that has all the computing, storage and networking resources you need.
 
-Before you start, you'll neeed an account login and password from the person in charge of this lab. 
+Before you start, you'll need an account login and password from the person in charge of this lab. 
 
 For those of you in the lab, add yourself to this list to take an account:
 https://etherpad.openstack.org/p/san-diego
@@ -76,7 +76,8 @@ Congrats! You swapped servers using the floating IPs without anyone knowing!
 Business it picking up! You need a second web server to handle the load and load balancing between the two. We're going to take our floating IP and assign it to the load balancer which will send traffic across the two virtual machines.
 <UL>
 <LI>Clone the existing Ubunutu server (don't assign it a floating IP)
-<LI>Create a Load Balancer and assign it the floating IP
+<LI>Remove the floating_IP from the Ubuntu server
+<LI>Under Network, Create a Load Balancer in the Los Angeles/US data center and assign it the floating IP
 <LI>Drag both servers into the load balancing pool
 <LI>Use a web browser to connect to the web server at http://floating_IP/
 </UL>
